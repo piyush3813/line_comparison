@@ -12,8 +12,23 @@ public class LineComparison {
 //        creating default constructor object
         LineComparison line = new LineComparison();
         logger.info("welcome to Line Comparison Computation on Master branch  ");
-//        line.equals();
-        line.compare_To();
+        logger.info("what you want to check equal or compare to enter choice 1 0r 2");
+
+        Scanner sc1 = new Scanner(System.in);
+        int choice = sc1.nextInt();
+
+        switch (choice){
+            case 1:
+                logger.info("you have selected for equals");
+                line.equals();
+                break;
+            case 2:
+                logger.info("you have selected for compare to");
+                line.compare_To();
+                break;
+            default:logger.info("enter valid choice ");
+        }
+
   }
 
      double length_finder(){
@@ -36,13 +51,13 @@ public class LineComparison {
     void equals(){
         String l1 = String.valueOf(length_finder());
          String l2 = String.valueOf(length_finder());
-        logger.info("length of both the string are equals or not if equal(true) if not (false) "+l1.equals(l2));
+        logger.info("length of both the string are equals or not if equal(true) if not (false) will be printed = "+l1.equals(l2));
     }
 
     void  compare_To(){
         String l1 = String.valueOf(length_finder());
         String l2 = String.valueOf(length_finder());
-        logger.info("length of both the string are equals or not if equal(0) if not (1) "+(l1.compareTo(l2 )));
+        logger.info("length of both the string are equals or not if equal(0) if not (1) will be printed = "+(l1.compareTo(l2 )));
 
 
     }
